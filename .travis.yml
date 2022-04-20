@@ -1,0 +1,12 @@
+language: python
+matrix:
+    include:
+        - python: 3.8
+          dist: bionic
+before_install:
+    -  pip install gdshortener
+install:
+    -  pip install -r requirements.txt
+    -  pip install nose
+script:
+    -  nosetests
